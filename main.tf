@@ -68,7 +68,7 @@ resource "aws_internet_gateway" "ig" {
 
 # Elastic-IP (eip) for NAT
 resource "aws_eip" "nat_eip" {
-  vpc        = true
+  vpc        = enable
   depends_on = [aws_internet_gateway.ig]
 }
 
